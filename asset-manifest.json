@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/SweetBitesShop/static/css/main.7acaea2f.css",
-    "main.js": "/SweetBitesShop/static/js/main.077a8475.js",
+    "main.js": "/SweetBitesShop/static/js/main.58168974.js",
     "index.html": "/SweetBitesShop/index.html",
     "main.7acaea2f.css.map": "/SweetBitesShop/static/css/main.7acaea2f.css.map",
-    "main.077a8475.js.map": "/SweetBitesShop/static/js/main.077a8475.js.map"
+    "main.58168974.js.map": "/SweetBitesShop/static/js/main.58168974.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.077a8475.js"
+    "static/js/main.58168974.js"
   ]
 }
