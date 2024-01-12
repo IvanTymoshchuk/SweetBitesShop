@@ -61,16 +61,13 @@
 
 // Donuts.js
 
-
-import React from "react";
-import { Keyboard, Pagination, Navigation } from "swiper/modules";
+import React from 'react';
+import { Keyboard, Pagination } from 'swiper/modules';
 // import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import { Wraper, Title } from "./Donuts.styled";
-
-import { data } from "./data";
-import { DonutsItem } from "./DonutsItem/DonutsItem";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Wraper, Title } from './Donuts.styled';
+import { DonutsItem } from './DonutsItem/DonutsItem';
+import { data } from './data';
 
 export const Donuts = () => {
   return (
@@ -85,8 +82,7 @@ export const Donuts = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
+        modules={[Keyboard, Pagination]}
 
         //!autoplay --------------------
         // slidesPerView={3}
@@ -95,7 +91,6 @@ export const Donuts = () => {
         // }}
         // modules={[Autoplay]}
         //!-------------------
-        
       >
         {data.map((donuts, i) => (
           <SwiperSlide key={i}>
