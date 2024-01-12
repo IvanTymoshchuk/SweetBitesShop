@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { mq, colors } from "../../utils";
+import styled from '@emotion/styled';
+import { mq, colors } from '../../utils';
 
 export const Section = styled.section`
   padding-left: 30px;
@@ -15,8 +15,16 @@ export const Section = styled.section`
 export const WrapImg = styled.div``;
 
 export const Img = styled.img`
-  width: 411px;
-  height: 411px;
+  width: 420px;
+  height: 389px;
+  ${mq.tablet} {
+    width: 688px;
+    height: 637.219px;
+  }
+  ${mq.desktop} {
+    width: 411px;
+    height: 411px;
+  }
 `;
 export const Title = styled.h2`
   color: ${colors.primary};
