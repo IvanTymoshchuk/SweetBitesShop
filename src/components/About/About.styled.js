@@ -12,7 +12,12 @@ export const Section = styled.section`
     padding: 90px 80px;
   }
 `;
-export const WrapImg = styled.div``;
+export const WrapImg = styled.div`
+  ${mq.desktop} {
+    max-width: 411px;
+    height: 411px;
+  }
+`;
 
 export const Img = styled.img`
   background-image: url(${about});
@@ -33,17 +38,10 @@ export const Title = styled.h2`
   }
 `;
 export const Descr = styled.p`
-  width: 420px;
+  max-width: 738px;
   color: ${colors.primary};
   font-size: 24px;
 
-  ${mq.tablet} {
-    width: 634px;
-  }
-  ${mq.desktop} {
-    width: 738px;
-    font-size: 26px;
-  }
 `;
 export const Wraper = styled.div`
   display: flex;
