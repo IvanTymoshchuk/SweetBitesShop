@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { mq, colors } from "../../utils";
-import hero from "../../img/hero-mob.png";
-import hero2 from "../../img/hero-tabl.png";
-import hero3 from "../../img/hero-desk.png";
+import hero from "../../img/hero/hero-mob.png";
+import hero2 from "../../img/hero/hero-tabl.png";
+import hero3 from "../../img/hero/hero-desk.png";
 
 export const Wraper = styled.section`
   padding-left: 30px;

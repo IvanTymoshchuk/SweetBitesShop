@@ -1,29 +1,26 @@
 import styled from '@emotion/styled';
 import { mq, colors } from '../../utils';
+import about from '../../img/about/about-mob.png';
+import aboutTab from '../../img/about/about-tab.png';
+import aboutDesk from '../../img/about/about-desk.png';
 
 export const Section = styled.section`
   padding-left: 30px;
   padding-right: 30px;
   background-color: ${colors.pimkLight};
   ${mq.tablet} {
-    padding-top: 90px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 90px;
+    padding: 90px 80px;
   }
 `;
 export const WrapImg = styled.div``;
 
 export const Img = styled.img`
-  width: 420px;
-  height: 389px;
+  background-image: url(${about});
   ${mq.tablet} {
-    width: 688px;
-    height: 637.219px;
+    background-image: url(${aboutTab});
   }
   ${mq.desktop} {
-    width: 411px;
-    height: 411px;
+    background-image: url(${aboutDesk});
   }
 `;
 export const Title = styled.h2`

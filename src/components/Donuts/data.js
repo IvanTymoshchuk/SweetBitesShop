@@ -1,6 +1,6 @@
-import one from "../../img/1.png";
-import two from "../../img/2.png";
-import three from "../../img/3.png";
+import one from "../../img/donuts/1.png";
+import two from "../../img/donuts/2.png";
+import three from "../../img/donuts/3.png";
 
 export const data = [
   {

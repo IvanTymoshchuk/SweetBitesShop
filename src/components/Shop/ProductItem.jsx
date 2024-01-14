@@ -4,7 +4,7 @@ const ProductItem = () => {
   return (
     <ProductStyledItem>
       <div className="imageThumb">
-        <img src={require("../../img/2.png")} alt="product" />
+        <img src={require("../../img/donuts/2.png")} alt="product" />
       </div>
       <div>
         <p className="productName">Chocolate Macaron</p>
