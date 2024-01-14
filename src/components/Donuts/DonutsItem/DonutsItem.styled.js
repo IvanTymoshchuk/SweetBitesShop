@@ -1,18 +1,21 @@
-import styled from "@emotion/styled";
-import {  mq,colors } from "../../../utils";
-
+import styled from '@emotion/styled';
+import { mq, colors } from '../../../utils';
 
 export const Wraper = styled.div`
-  padding: 53px 45px;
+  padding: 61px 58px 62px 57px;
   background-color: ${colors.backgroundHeader};
+  ${mq.desktop} {
+    padding: 53px 45px;
+  }
 `;
 export const Img = styled.img`
-  width: 299px;
-  height: 306.611px;
+  ${mq.desktop} {
+    height: 307px;
+  }
 `;
 export const List = styled.ul`
   /* display: flex; */
-  
+
   ${mq.maxMobile} {
     flex-direction: column;
   }
