@@ -7,7 +7,7 @@ export const HeaderW = styled.header`
   background-color: ${colors.backgroundHeader};
   padding-bottom: 27px;
 
-  ${mq.tablet} {
+  ${mq.desktop} {
     padding-bottom: 77px;
   }
 `;

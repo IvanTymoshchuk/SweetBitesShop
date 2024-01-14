@@ -1,5 +1,5 @@
-import React from "react";
-import about from "../../img/about.png";
+import React from 'react';
+import about from '../../img/about/about-mob.png';
 import {
   Section,
   Wraper,
@@ -8,7 +8,7 @@ import {
   Img,
   Title,
   Descr,
-} from "./About.styled";
+} from './About.styled';
 
 export const About = () => {
   return (
