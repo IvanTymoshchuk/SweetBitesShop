@@ -1,13 +1,14 @@
-import styled from "@emotion/styled";
-import background from "../../img/background.jpg";
-import { mq, colors } from "../../utils";
+import styled from '@emotion/styled';
+import background from '../../img/background.jpg';
+import { mq, colors } from '../../utils';
+
 
 export const HeaderW = styled.header`
   background-color: ${colors.backgroundHeader};
   padding-bottom: 27px;
 
   ${mq.tablet} {
-    padding-bottom: 78px;
+    padding-bottom: 77px;
   }
 `;
 
@@ -170,8 +171,10 @@ export const LinkSoc = styled.a`
 `;
 
 export const WrapContModal = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 50px;
+  ${mq.maxDesktop} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
 `;
