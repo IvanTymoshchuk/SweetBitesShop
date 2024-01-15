@@ -19,7 +19,7 @@ export const Container = styled.div`
     justify-content: space-between;
   }
 `;
-export const WraperItems = styled.div`
+export const WraperLogo = styled.div`
   margin-bottom: 40px;
 `;
 
@@ -31,7 +31,7 @@ export const Logo = styled.a`
 
 export const Span = styled.span``;
 
-export const WraperSec = styled.div`
+export const WraperList = styled.div`
   display: flex;
   ${mq.maxTablet} {
     justify-content: space-between;
@@ -39,14 +39,14 @@ export const WraperSec = styled.div`
   }
 `;
 
-export const WraperList = styled.ul`
+export const WraperItems = styled.ul`
   ${mq.desktop} {
     margin-right: 428px;
   }
 `;
 export const Items = styled.li``;
 
-export const WraperListSec = styled.ul``;
+export const WraperItemsSec = styled.ul``;
 export const ItemsSec = styled.li``;
 
 export const Link = styled(NavLink)`

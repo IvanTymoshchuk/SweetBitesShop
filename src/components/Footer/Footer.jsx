@@ -1,33 +1,33 @@
 import { SvgIcon } from 'components/Svg/Svg';
 import {
   Wraper,
-  WraperItems,
+  Container,
+  WraperLogo,
   Logo,
   Span,
-  Link,
   WraperList,
+  WraperItems,
   Items,
-  SpanCopyRight,
-  WraperListSec,
+  Link,
+  WraperItemsSec,
   ItemsSec,
-  WraperSec,
-  Container
+  SpanCopyRight,
 } from './Footer.styled';
 
 export const Footer = () => {
   return (
     <Wraper>
       <Container>
-      <WraperItems>
+      <WraperLogo>
         <Logo>
           Sweet
           <SvgIcon iconId="icon-logo" />
           <br />
           <Span>BitesShop</Span>
         </Logo>
-      </WraperItems>
-      <WraperSec>
-        <WraperList>
+      </WraperLogo>
+      <WraperList>
+        <WraperItems>
           <Items>
             <Link to="/about">About us</Link>
           </Items>
@@ -37,9 +37,9 @@ export const Footer = () => {
           <Items>
             <Link href="#">Bestsellers</Link>
           </Items>
-        </WraperList>
+        </WraperItems>
 
-        <WraperListSec>
+        <WraperItemsSec>
           <ItemsSec>
             <Link to="https://www.instagram.com/" target="_blanck">
               Instagram
@@ -55,8 +55,8 @@ export const Footer = () => {
               Twitter
             </Link>
           </ItemsSec>
-        </WraperListSec>
-      </WraperSec>
+        </WraperItemsSec>
+      </WraperList>
       </Container>
 
       <SpanCopyRight>
