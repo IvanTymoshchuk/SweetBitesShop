@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import sprite from "../../img/symbol-defs.svg";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { SvgIcon } from 'components/Svg/Svg';
 import {
   HeaderW,
   Wraper,
@@ -10,121 +9,100 @@ import {
   Nav,
   NavList,
   NavItem,
-  NavLink,
+  NavBtn,
   SecondList,
   SecondItem,
+  Btn,
   CloseButton,
   ToggleButton,
   NavSocial,
-  Inst,
-  Facebook,
-  Twiter,
+  NavSocialItems,
   WrapContModal,
   LinkSoc,
-} from "./Header.styled";
+} from './Header.styled';
+
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavLinkClick = (to) => {
-    navigate(to);
-    setIsMenuOpen(false);
-  };
-
   return (
     <HeaderW>
       <Wraper>
-        
         <Logo>
-          <HeaderLogo onClick={() => handleNavLinkClick("/")}>
-            Sweet{" "}
-            <svg width="20" height="20">
-              <use href={sprite + `#icon-logo`}></use>
-            </svg>
+          <HeaderLogo to="/">
+            Sweet <SvgIcon iconId="icon-logo" />
             <br />
             <Span>BitesShop</Span>
           </HeaderLogo>
         </Logo>
 
-        <Nav id="nav-menu" className={isMenuOpen ? "show" : ""}>
-          <CloseButton>
-            <svg width="20" height="20" onClick={toggleMenu}>
-              <use href={sprite + `#icon-close`}></use>
-            </svg>
+        <Nav id="nav-menu" className={isMenuOpen ? 'show' : ''}>
+          <CloseButton onClick={toggleMenu}>
+            <SvgIcon iconId="icon-close" />
           </CloseButton>
 
           <WrapContModal>
             <NavList>
               <NavItem>
-                <NavLink onClick={() => handleNavLinkClick("/")}>Home</NavLink>
+                <NavBtn to="/">Home</NavBtn>
               </NavItem>
               <NavItem>
-                <NavLink onClick={() => handleNavLinkClick("/about")}>
-                  About
-                </NavLink>
+                <NavBtn to="/about">About</NavBtn>
               </NavItem>
               <NavItem>
-                <NavLink onClick={() => handleNavLinkClick("/shop")}>
-                  Shop
-                </NavLink>
+                <NavBtn to="/shop">Shop</NavBtn>
               </NavItem>
             </NavList>
 
             <NavSocial>
-              <Inst>
-                {" "}
-                <LinkSoc href="">Instagram</LinkSoc>
-              </Inst>
-              <Facebook>
-                {" "}
-                <LinkSoc href="">Facebook</LinkSoc>
-              </Facebook>
-              <Twiter>
-                {" "}
-                <LinkSoc href="">Twitter</LinkSoc>
-              </Twiter>
+              <NavSocialItems>
+                {' '}
+                <LinkSoc to="https://www.instagram.com/" target="_blanck">
+                  Instagram
+                </LinkSoc>
+              </NavSocialItems>
+              <NavSocialItems>
+                {' '}
+                <LinkSoc to="https://www.facebook.com/" target="_blanck">
+                  Facebook
+                </LinkSoc>
+              </NavSocialItems>
+              <NavSocialItems>
+                {' '}
+                <LinkSoc to="https://twitter.com/" target="_blanck">
+                  Twitter
+                </LinkSoc>
+              </NavSocialItems>
             </NavSocial>
-
           </WrapContModal>
         </Nav>
 
         <SecondList>
-
           <SecondItem>
-            <a href="#">
-              <svg width="20" height="20">
-                <use href={sprite + `#icon-serch`}></use>
-              </svg>
-            </a>
+            <Btn>
+              <SvgIcon iconId="icon-serch" />
+            </Btn>
           </SecondItem>
 
           <SecondItem>
-            <a href="#">
-              <svg width="20" height="20">
-                <use href={sprite + `#icon-user`}></use>
-              </svg>
-            </a>
+            <Btn>
+              <SvgIcon iconId="icon-user" />
+            </Btn>
           </SecondItem>
 
           <SecondItem>
-            <a href="#">
-              <svg width="20" height="20">
-                <use href={sprite + `#icon-basket`}></use>
-              </svg>
-            </a>
+            <Btn>
+              <SvgIcon iconId="icon-basket" />
+            </Btn>
           </SecondItem>
 
-          <ToggleButton>
-            <svg width="20" height="20" onClick={toggleMenu}>
-              <use href={sprite + `#icon-menu`}></use>
-            </svg>
+          <ToggleButton onClick={toggleMenu}>
+            <SvgIcon iconId="icon-menu" />
           </ToggleButton>
-
         </SecondList>
       </Wraper>
     </HeaderW>
