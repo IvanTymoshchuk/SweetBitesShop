@@ -7,13 +7,17 @@ import {
   Link,
   WraperList,
   Items,
-  WrapCopy,
   SpanCopyRight,
+  WraperListSec,
+  ItemsSec,
+  WraperSec,
+  Container
 } from './Footer.styled';
 
 export const Footer = () => {
   return (
     <Wraper>
+      <Container>
       <WraperItems>
         <Logo>
           Sweet
@@ -21,6 +25,8 @@ export const Footer = () => {
           <br />
           <Span>BitesShop</Span>
         </Logo>
+      </WraperItems>
+      <WraperSec>
         <WraperList>
           <Items>
             <Link to="/about">About us</Link>
@@ -32,29 +38,30 @@ export const Footer = () => {
             <Link href="#">Bestsellers</Link>
           </Items>
         </WraperList>
-        <WraperList>
-          <Items>
+
+        <WraperListSec>
+          <ItemsSec>
             <Link to="https://www.instagram.com/" target="_blanck">
               Instagram
             </Link>
-          </Items>
-          <Items>
+          </ItemsSec>
+          <ItemsSec>
             <Link to="https://www.facebook.com/" target="_blanck">
               Facebook
             </Link>
-          </Items>
-          <Items>
+          </ItemsSec>
+          <ItemsSec>
             <Link to="https://twitter.com/" target="_blanck">
               Twitter
             </Link>
-          </Items>
-        </WraperList>
-      </WraperItems>
-      <WrapCopy>
-        <SpanCopyRight>
-          &#169; 2023 Sweet Bites Shop All rights reserved.
-        </SpanCopyRight>
-      </WrapCopy>
+          </ItemsSec>
+        </WraperListSec>
+      </WraperSec>
+      </Container>
+
+      <SpanCopyRight>
+        &#169; 2023 Sweet Bites Shop All rights reserved.
+      </SpanCopyRight>
     </Wraper>
   );
 };
