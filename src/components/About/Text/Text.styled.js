@@ -12,3 +12,4 @@ export const Btn = styled.button`
   font-size: 20px;
   border-bottom: 2px solid #d75d8e;
 `;
+
