@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import background from '../../img/background.jpg';
 import { mq, colors } from '../../utils';
-
+import { NavLink } from 'react-router-dom';
 
 export const HeaderW = styled.header`
   background-color: ${colors.backgroundHeader};
@@ -51,8 +51,6 @@ export const HeaderLogo = styled.a`
   }
 `;
 
-export const Span = styled.span``;
-
 export const Nav = styled.nav`
   ${mq.maxDesktop} {
     position: fixed;
@@ -90,7 +88,7 @@ export const NavItem = styled.li`
   list-style: none;
 `;
 
-export const NavLink = styled.button`
+export const NavBtn = styled(NavLink)`
   font-family: Gabarito;
   background-color: transparent;
   color: ${colors.primary};
@@ -151,8 +149,6 @@ export const SecondList = styled.ul`
   gap: 20px;
 `;
 
-export const SecondItem = styled.li``;
-
 export const NavSocial = styled.ul`
   display: flex;
   gap: 14px;
@@ -161,10 +157,7 @@ export const NavSocial = styled.ul`
   }
 `;
 
-export const Inst = styled.li``;
-export const Facebook = styled.li``;
-export const Twiter = styled.li``;
-export const LinkSoc = styled.a`
+export const LinkSoc = styled(NavLink)`
   color: #d86090;
   font-size: 24px;
   text-transform: capitalize;
@@ -178,3 +171,9 @@ export const WrapContModal = styled.div`
     padding-bottom: 50px;
   }
 `;
+
+export const Span = styled.span``;
+export const Btn = styled.button``;
+export const SecondItem = styled.li``;
+export const NavSocialItems = styled.li``;
+

@@ -1,16 +1,15 @@
-import styled from "@emotion/styled";
-import { mq, colors } from "../../utils";
+import styled from '@emotion/styled';
+import { mq, colors } from '../../utils';
+import { NavLink } from 'react-router-dom';
 
 export const Wraper = styled.footer`
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 70px 130px 50px 40px;
   background-color: ${colors.backgroundHeader};
   ${mq.tablet} {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 80px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 70px 46px 50px 30px;
+  }
+  ${mq.desktop} {
+    padding: 80px 248px 36px 80px;
   }
 `;
 
@@ -35,13 +34,12 @@ export const WraperList = styled.ul`
   gap: 14px;
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
   color: #fcf3f6;
 `;
 
 export const WrapCopy = styled.div`
   display: flex;
-  padding-bottom: 34px;
 `;
 
 export const Items = styled.li`
@@ -52,7 +50,6 @@ export const Items = styled.li`
   line-height: normal;
   text-transform: capitalize;
 `;
-
 
 export const SpanCopyRight = styled.span`
   color: #fcf3f6;

@@ -1,4 +1,4 @@
-import React from "react";
+import { SvgIcon } from 'components/Svg/Svg';
 import {
   Wraper,
   WraperItems,
@@ -9,8 +9,7 @@ import {
   Items,
   WrapCopy,
   SpanCopyRight,
-} from "./Footer.styled";
-import sprite from "../../img/symbol-defs.svg";
+} from './Footer.styled';
 
 export const Footer = () => {
   return (
@@ -18,18 +17,16 @@ export const Footer = () => {
       <WraperItems>
         <Logo>
           Sweet
-          <svg width="43" height="43">
-            <use href={sprite + `#icon-logo`}></use>
-          </svg>
+          <SvgIcon iconId="icon-logo" />
           <br />
           <Span>BitesShop</Span>
         </Logo>
         <WraperList>
           <Items>
-            <Link href="#">About us</Link>
+            <Link to="/about">About us</Link>
           </Items>
           <Items>
-            <Link href="#">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </Items>
           <Items>
             <Link href="#">Bestsellers</Link>
@@ -37,13 +34,19 @@ export const Footer = () => {
         </WraperList>
         <WraperList>
           <Items>
-            <Link href="#">Instagram</Link>
+            <Link to="https://www.instagram.com/" target="_blanck">
+              Instagram
+            </Link>
           </Items>
           <Items>
-            <Link href="#">Facebook</Link>
+            <Link to="https://www.facebook.com/" target="_blanck">
+              Facebook
+            </Link>
           </Items>
           <Items>
-            <Link href="#">Twitter</Link>
+            <Link to="https://twitter.com/" target="_blanck">
+              Twitter
+            </Link>
           </Items>
         </WraperList>
       </WraperItems>
