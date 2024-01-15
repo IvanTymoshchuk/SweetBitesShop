@@ -21,7 +21,6 @@ import {
   LinkSoc,
 } from './Header.styled';
 
-
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -34,7 +33,7 @@ export const Header = () => {
       <Wraper>
         <Logo>
           <HeaderLogo to="/">
-            Sweet <SvgIcon iconId="icon-logo" />
+            Sweet <SvgIcon iconId="icon-logo" width="39" height="39"/>
             <br />
             <Span>BitesShop</Span>
           </HeaderLogo>
@@ -42,7 +41,7 @@ export const Header = () => {
 
         <Nav id="nav-menu" className={isMenuOpen ? 'show' : ''}>
           <CloseButton onClick={toggleMenu}>
-            <SvgIcon iconId="icon-close" />
+            <SvgIcon iconId="icon-close" width="30" height="30" />
           </CloseButton>
 
           <WrapContModal>
@@ -84,24 +83,24 @@ export const Header = () => {
         <SecondList>
           <SecondItem>
             <Btn>
-              <SvgIcon iconId="icon-serch" />
+              <SvgIcon iconId="icon-serch" width="30" height="30" />
             </Btn>
           </SecondItem>
 
           <SecondItem>
             <Btn>
-              <SvgIcon iconId="icon-user" />
+              <SvgIcon iconId="icon-user" width="30" height="30" />
             </Btn>
           </SecondItem>
 
           <SecondItem>
             <Btn>
-              <SvgIcon iconId="icon-basket" />
+              <SvgIcon iconId="icon-basket" width="30" height="30" />
             </Btn>
           </SecondItem>
 
           <ToggleButton onClick={toggleMenu}>
-            <SvgIcon iconId="icon-menu" />
+            <SvgIcon iconId="icon-menu" width="36" height="30" />
           </ToggleButton>
         </SecondList>
       </Wraper>

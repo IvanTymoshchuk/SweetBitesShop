@@ -9,6 +9,7 @@ import {
   Title,
   Descr,
 } from './About.styled';
+import { Text } from './Text/Text';
 
 export const About = () => {
   return (
@@ -19,15 +20,7 @@ export const About = () => {
         </WrapImg>
         <WrapText>
           <Title>about us</Title>
-          <Descr>
-            Welcome to Sweet Bites Shop, where we turn moments into memories
-            through the art of baking.our passion for crafting delicious and
-            visually stunning cakes sets us apart. From sourcing the finest
-            ingredients to creating personalized designs, we're dedicated to
-            making your celebrations extraordinary. explore our menu, savor the
-            sweetness, and let Sweet Bites Shop be a part of your joyous
-            occasions.
-          </Descr>
+          <Text />
         </WrapText>
       </Wraper>
     </Section>

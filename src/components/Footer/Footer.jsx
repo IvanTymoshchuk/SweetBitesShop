@@ -21,7 +21,7 @@ export const Footer = () => {
       <WraperLogo>
         <Logo>
           Sweet
-          <SvgIcon iconId="icon-logo" />
+          <SvgIcon iconId="icon-logo" width="43" height="43"/>
           <br />
           <Span>BitesShop</Span>
         </Logo>

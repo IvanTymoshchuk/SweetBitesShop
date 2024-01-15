@@ -36,11 +36,7 @@ export const Title = styled.h2`
     font-size: 75px;
   }
 `;
-export const Descr = styled.p`
-  max-width: 738px;
-  color: ${colors.primary};
-  font-size: 24px;
-`;
+
 export const Wraper = styled.div`
   display: flex;
   justify-content: space-between;
