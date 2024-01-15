@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { mq, colors } from "../../utils";
+import styled from '@emotion/styled';
+import { mq, colors } from '../../utils';
 
 export const Wraper = styled.section`
   padding-left: 30px;
@@ -14,12 +14,11 @@ export const Wraper = styled.section`
 
 export const Title = styled.h2`
   color: ${colors.primary};
-  font-family: Gabarito;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  font-size: 45px;
+  padding: 70px 0 25px;
   text-transform: uppercase;
-  padding-top: 90px;
-  padding-bottom: 30px;
+  ${mq.desktop} {
+    font-size: 75px;
+    padding: 90px 0 30px;
+  }
 `;
