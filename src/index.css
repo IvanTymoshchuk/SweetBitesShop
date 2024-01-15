@@ -46,3 +46,9 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background: #d75d8e;
+}

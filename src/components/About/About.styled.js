@@ -5,8 +5,7 @@ import aboutTab from '../../img/about/about-tab.png';
 import aboutDesk from '../../img/about/about-desk.png';
 
 export const Section = styled.section`
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 70px 30px;
   background-color: ${colors.pimkLight};
   ${mq.tablet} {
     padding: 90px 80px;
@@ -41,7 +40,6 @@ export const Descr = styled.p`
   max-width: 738px;
   color: ${colors.primary};
   font-size: 24px;
-
 `;
 export const Wraper = styled.div`
   display: flex;
