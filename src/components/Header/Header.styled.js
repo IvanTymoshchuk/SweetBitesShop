@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import background from '../../img/background.jpg';
 import { mq, colors } from '../../utils';
 import { NavLink } from 'react-router-dom';
 
@@ -25,7 +24,6 @@ export const Wraper = styled.div`
   }
 `;
 
-
 export const Image = styled.img`
   width: 50px;
   border-radius: 50%;
@@ -46,7 +44,7 @@ export const Nav = styled.nav`
     position: fixed;
     top: 0px;
     right: -100%;
-    background-image: url(${background});
+    background-color: ${colors.modal};
     width: 100%;
     height: 100vh;
     z-index: 100;
@@ -80,11 +78,10 @@ export const NavItem = styled.li`
 
 export const NavBtn = styled(NavLink)`
   font-family: Gabarito;
-  
+
   color: ${colors.primary};
   font-size: 50px;
-  
-  
+
   ${mq.desktop} {
     color: ${colors.white};
     font-size: 28px;
