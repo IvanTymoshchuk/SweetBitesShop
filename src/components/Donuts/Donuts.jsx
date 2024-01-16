@@ -2,14 +2,15 @@ import React from 'react';
 import { Pagination } from 'swiper/modules';
 // import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Wraper, Title } from './Donuts.styled';
+import { Wraper } from './Donuts.styled';
 import { DonutsItem } from './DonutsItem/DonutsItem';
 import { data } from './data';
+import { Titles } from './../Title/Title';
 
 export const Donuts = () => {
   return (
     <Wraper>
-      <Title>Bestsellers</Title>
+      <Titles text="Bestsellers" />
 
       <Swiper
         slidesPerView={1}

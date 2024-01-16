@@ -1,15 +1,8 @@
 import React from 'react';
 import about from '../../img/about/about-mob.png';
-import {
-  Section,
-  Wraper,
-  WrapImg,
-  WrapText,
-  Img,
-  Title,
-  Descr,
-} from './About.styled';
+import { Section, Wraper, WrapImg, WrapText, Img } from './About.styled';
 import { Text } from './Text/Text';
+import { Titles } from 'components/Title/Title';
 
 export const About = () => {
   return (
@@ -19,7 +12,7 @@ export const About = () => {
           <Img src={about} alt="about-img" />
         </WrapImg>
         <WrapText>
-          <Title>about us</Title>
+          <Titles text="about us" />
           <Text />
         </WrapText>
       </Wraper>
