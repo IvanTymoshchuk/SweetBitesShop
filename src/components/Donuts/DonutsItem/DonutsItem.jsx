@@ -1,4 +1,5 @@
-import { Img, Items, Title, Span, Wraper, List } from "./DonutsItem.styled";
+import { SubTitles } from 'components/Title/SubTitle/SubTitle';
+import { Img, Items, Span, Wraper, List } from './DonutsItem.styled';
 
 export const DonutsItem = ({ title, imgUrl, price }) => {
   return (
@@ -7,7 +8,7 @@ export const DonutsItem = ({ title, imgUrl, price }) => {
         <Wraper>
           <Img src={imgUrl} alt="donuts" />
         </Wraper>
-        <Title>{title}</Title>
+        <SubTitles text={title} />
         <Span>{price}</Span>
       </Items>
     </List>

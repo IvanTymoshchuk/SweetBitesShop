@@ -90,8 +90,7 @@ export const Text = () => {
       {initialText}
       {!showFullText && (
         <Btn onClick={toggleFullText}>
-          Read more{' '}
-          <SvgIcon iconId="icon-arrow" width="20" height="20" fill="#d75d8e" />
+          Read more <SvgIcon iconId="icon-arrow-down" width="20" height="20" />
         </Btn>
       )}
       {showFullText && additionalText}

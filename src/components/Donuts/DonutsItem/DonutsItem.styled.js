@@ -30,12 +30,6 @@ export const Items = styled.li`
   align-items: flex-start;
 `;
 
-export const Title = styled.h2`
-  margin-top: 15px;
-  color: ${colors.primary};
-  font-size: 28px;
-  text-transform: uppercase;
-`;
 export const Span = styled.span`
   color: ${colors.primary};
   font-size: 25px;
