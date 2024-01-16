@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { mq, colors } from "../../utils";
-import hero from "../../img/hero/hero-mob.png";
-import hero2 from "../../img/hero/hero-tabl.png";
-import hero3 from "../../img/hero/hero-desk.png";
+import styled from '@emotion/styled';
+import { mq, colors } from '../../utils';
+import hero from '../../img/hero/hero-mob.png';
+import hero2 from '../../img/hero/hero-tabl.png';
+import hero3 from '../../img/hero/hero-desk.png';
 
 export const Wraper = styled.section`
   padding-left: 30px;
@@ -19,15 +19,18 @@ export const Wraper = styled.section`
   }
 `;
 export const Title = styled.h1`
+  font-size: 30px;
+  top: 315px;
   position: absolute;
-  top: 290px;
-  color: #fcf3f6;
-  font-size: 50px;
+  color: ${colors.white};
+
   text-transform: uppercase;
-  text-transform: uppercase;
+  ${mq.mobile} {
+    top: 290px;
+    font-size: 50px;
+  }
   ${mq.tablet} {
     top: 257px;
-    font-size: 50px;
   }
   ${mq.desktop} {
     top: 330px;
@@ -36,16 +39,21 @@ export const Title = styled.h1`
 `;
 export const Button = styled.button`
   position: absolute;
+  width: 135px;
+  height: 45px;
+  gap: 5px;
+  border-radius: 30px;
   top: 405px;
   display: flex;
-  width: 223px;
-  height: 76px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  background-color: transparent;
-  border-radius: 70px;
   border: 4px solid #fcf3f6;
+  ${mq.mobile} {
+    width: 223px;
+    height: 76px;
+    border-radius: 70px;
+    gap: 10px;
+  }
   ${mq.desktop} {
     top: 587px;
   }
@@ -53,7 +61,10 @@ export const Button = styled.button`
 export const Span = styled.span`
   color: ${colors.white};
   font-family: Gabarito;
-  font-size: 28px;
+  font-size: 20px;
+  ${mq.mobile} {
+    font-size: 28px;
+  }
 `;
 
 export const Img = styled.div`
@@ -63,12 +74,13 @@ export const Img = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  ${mq.tablet} {
+  @media (min-width: 500px) {
     background-image: url(${hero2});
     margin-left: auto;
     width: 519px;
     height: 491px;
   }
+
   ${mq.desktop} {
     background-image: url(${hero3});
     margin-left: auto;

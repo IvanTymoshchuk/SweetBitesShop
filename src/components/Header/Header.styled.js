@@ -31,9 +31,12 @@ export const Image = styled.img`
 `;
 
 export const HeaderLogo = styled.a`
+  font-size: 12px;
   color: ${colors.white};
-  font-size: 36px;
 
+  ${mq.mobile} {
+    font-size: 36px;
+  }
   ${mq.desktop} {
     font-size: 40px;
   }
