@@ -13,26 +13,18 @@ export const HeaderW = styled.header`
 `;
 
 export const Wraper = styled.div`
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 43px;
+  padding: 43px 30px 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   ${mq.tablet} {
-    justify-content: space-between;
     padding-top: 32px;
-    align-items: center;
   }
   ${mq.desktop} {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 32px 80px 0 80px;
   }
 `;
-export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-`;
+
 
 export const Image = styled.img`
   width: 50px;
@@ -41,13 +33,11 @@ export const Image = styled.img`
 `;
 
 export const HeaderLogo = styled.a`
-  text-decoration: none;
   color: ${colors.white};
-  font-size: 34px;
-  cursor: pointer;
+  font-size: 36px;
 
-  ${mq.tablet} {
-    font-size: 24px;
+  ${mq.desktop} {
+    font-size: 40px;
   }
 `;
 
@@ -90,14 +80,14 @@ export const NavItem = styled.li`
 
 export const NavBtn = styled(NavLink)`
   font-family: Gabarito;
-  background-color: transparent;
+  
   color: ${colors.primary};
   font-size: 50px;
-  border: none;
-  cursor: pointer;
+  
+  
   ${mq.desktop} {
     color: ${colors.white};
-    font-size: 20px;
+    font-size: 28px;
     &:hover,
     &:focus {
       background-color: ${colors.pimkLight};
@@ -176,4 +166,3 @@ export const Span = styled.span``;
 export const Btn = styled.button``;
 export const SecondItem = styled.li``;
 export const NavSocialItems = styled.li``;
-

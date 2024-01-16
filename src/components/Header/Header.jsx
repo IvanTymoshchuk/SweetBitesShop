@@ -3,7 +3,6 @@ import { SvgIcon } from 'components/Svg/Svg';
 import {
   HeaderW,
   Wraper,
-  Logo,
   HeaderLogo,
   Span,
   Nav,
@@ -31,13 +30,11 @@ export const Header = () => {
   return (
     <HeaderW>
       <Wraper>
-        <Logo>
-          <HeaderLogo to="/">
-            Sweet <SvgIcon iconId="icon-logo" width="39" height="39"/>
-            <br />
-            <Span>BitesShop</Span>
-          </HeaderLogo>
-        </Logo>
+        <HeaderLogo to="/">
+          Sweet <SvgIcon iconId="icon-logo" width="39" height="39" />
+          <br />
+          <Span>BitesShop</Span>
+        </HeaderLogo>
 
         <Nav id="nav-menu" className={isMenuOpen ? 'show' : ''}>
           <CloseButton onClick={toggleMenu}>

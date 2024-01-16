@@ -27,15 +27,6 @@ export const Img = styled.img`
     background-image: url(${aboutDesk});
   }
 `;
-export const Title = styled.h2`
-  color: ${colors.primary};
-  font-size: 45px;
-  text-transform: uppercase;
-  margin-bottom: 35px;
-  ${mq.desktop} {
-    font-size: 75px;
-  }
-`;
 
 export const Wraper = styled.div`
   display: flex;
