@@ -30,7 +30,7 @@ export const Image = styled.img`
   margin-right: 10px;
 `;
 
-export const HeaderLogo = styled.a`
+export const HeaderLogo = styled(NavLink)`
   font-size: 12px;
   color: ${colors.white};
 

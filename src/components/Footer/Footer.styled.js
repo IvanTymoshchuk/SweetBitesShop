@@ -23,7 +23,7 @@ export const WraperLogo = styled.div`
   margin-bottom: 40px;
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(NavLink)`
   color: ${colors.white};
   font-size: 40px;
   font-weight: 600;
