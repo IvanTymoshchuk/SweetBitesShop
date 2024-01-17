@@ -5,25 +5,20 @@ import hero2 from '../../img/hero/hero-tabl.png';
 import hero3 from '../../img/hero/hero-desk.png';
 
 export const Wraper = styled.section`
-  padding-left: 30px;
-  padding-bottom: 35px;
+  padding: 0 0 35px 30px;
   background-color: ${colors.backgroundHeader};
   ${mq.tablet} {
-    padding-left: 40px;
-    padding-right: 30px;
+    padding: 0 30px 35px 40px;
   }
   ${mq.desktop} {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 75px;
+    padding: 0 80px 75px 80px;
   }
 `;
 export const Title = styled.h1`
-  font-size: 30px;
-  top: 315px;
   position: absolute;
   color: ${colors.white};
-
+  top: 315px;
+  font-size: 30px;
   text-transform: uppercase;
   ${mq.mobile} {
     top: 290px;
@@ -39,14 +34,14 @@ export const Title = styled.h1`
 `;
 export const Button = styled.button`
   position: absolute;
-  width: 135px;
-  height: 45px;
-  gap: 5px;
-  border-radius: 30px;
-  top: 405px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 135px;
+  height: 45px;
+  top: 405px;
+  gap: 5px;
+  border-radius: 30px;
   border: 4px solid #fcf3f6;
   ${mq.mobile} {
     width: 223px;
@@ -75,16 +70,13 @@ export const Img = styled.div`
   background-position: center;
   background-size: contain;
   @media (min-width: 500px) {
-    background-image: url(${hero2});
+    max-width: 762px;
     margin-left: auto;
-    width: 519px;
-    height: 491px;
+    background-image: url(${hero2});
   }
 
   ${mq.desktop} {
-    background-image: url(${hero3});
-    margin-left: auto;
-    width: 762px;
     height: 709px;
+    background-image: url(${hero3});
   }
 `;
