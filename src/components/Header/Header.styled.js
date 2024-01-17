@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mq, colors, hovers } from '../../utils';
+import { mq, colors, hovers, display } from '../../utils';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderW = styled.header`
@@ -12,10 +12,10 @@ export const HeaderW = styled.header`
 `;
 
 export const Wraper = styled.div`
-  padding: 43px 30px 0 30px;
-  display: flex;
+  ${display.flex}
   justify-content: space-between;
-  align-items: center;
+  padding: 43px 30px 0 30px;
+
   ${mq.tablet} {
     padding-top: 32px;
   }
@@ -63,9 +63,9 @@ export const Nav = styled.nav`
 `;
 
 export const NavList = styled.ul`
-  display: flex;
+  ${display.flex}
   flex-direction: column;
-  align-items: center;
+
   ${mq.desktop} {
     flex-direction: row;
     gap: 160px;
@@ -123,8 +123,7 @@ export const ToggleButton = styled.button`
   }
 `;
 export const SecondList = styled.ul`
-  display: flex;
-  align-items: center;
+  ${display.flex}
   gap: 20px;
 `;
 
@@ -144,9 +143,8 @@ export const LinkSoc = styled(NavLink)`
 
 export const WrapContModal = styled.div`
   ${mq.maxDesktop} {
-    display: flex;
+    ${display.flexSpace}
     flex-direction: column;
-    justify-content: space-between;
     padding-bottom: 50px;
   }
 `;

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { mq, colors, hovers } from '../../utils';
+import { mq, colors, hovers, display } from '../../utils';
 import { NavLink } from 'react-router-dom';
-
 
 export const Wraper = styled.footer`
   padding: 70px 46px 50px 30px;
@@ -16,8 +15,7 @@ export const Wraper = styled.footer`
 
 export const Container = styled.div`
   ${mq.desktop} {
-    display: flex;
-    justify-content: space-between;
+    ${display.flexSpace}
     align-items: baseline;
     margin-bottom: 77px;
   }

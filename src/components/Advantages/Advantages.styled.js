@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import { mq, colors } from "../../utils";
-import {  SwiperSlide } from "swiper/react";
+import styled from '@emotion/styled';
+import { mq, colors, display } from '../../utils';
+import { SwiperSlide } from 'swiper/react';
 
 export const Wraper = styled.section`
   background: ${colors.greanLight};
@@ -17,8 +17,7 @@ export const List = styled.ul`
 `;
 
 export const Item = styled(SwiperSlide)`
-  display: flex;
-  align-items: center;
+  ${display.flex}
   gap: 5px;
 `;
 
