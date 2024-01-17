@@ -14,7 +14,6 @@ export const Img = styled.img`
   }
 `;
 export const List = styled.ul`
-  /* display: flex; */
 
   ${mq.maxMobile} {
     flex-direction: column;

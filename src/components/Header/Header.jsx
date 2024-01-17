@@ -44,7 +44,7 @@ export const Header = () => {
           <WrapContModal>
             <NavList>
               <NavItem>
-                <NavBtn to="/">Home</NavBtn>
+                <NavBtn to="/home">Home</NavBtn>
               </NavItem>
               <NavItem>
                 <NavBtn to="/about">About</NavBtn>

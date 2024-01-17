@@ -19,7 +19,7 @@ export const Footer = () => {
     <Wraper>
       <Container>
       <WraperLogo>
-        <Logo>
+        <Logo to="/">
           Sweet
           <SvgIcon iconId="icon-logo" width="43" height="43"/>
           <br />
