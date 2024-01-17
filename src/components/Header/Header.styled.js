@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mq, colors } from '../../utils';
+import { mq, colors, hovers } from '../../utils';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderW = styled.header`
@@ -33,6 +33,7 @@ export const Image = styled.img`
 export const HeaderLogo = styled(NavLink)`
   font-size: 12px;
   color: ${colors.white};
+  ${hovers}
 
   ${mq.mobile} {
     font-size: 36px;
@@ -81,18 +82,13 @@ export const NavItem = styled.li`
 
 export const NavBtn = styled(NavLink)`
   font-family: Gabarito;
-
   color: ${colors.primary};
   font-size: 50px;
+  ${hovers}
 
   ${mq.desktop} {
     color: ${colors.white};
     font-size: 28px;
-    &:hover,
-    &:focus {
-      background-color: ${colors.pimkLight};
-      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
   }
 
   @media screen and (max-width: 760px) {
@@ -107,27 +103,20 @@ export const CloseButton = styled.button`
   top: 18px;
   right: 24px;
   display: block;
-  color: white;
-  background-color: transparent;
-  border: none;
+  color: ${colors.white};
+  ${hovers}
 
   cursor: pointer;
   ${mq.desktop} {
     display: none;
   }
-
-  &:hover {
-    background-color: red;
-  }
 `;
 
 export const ToggleButton = styled.button`
-  background-color: transparent;
   color: ${colors.white};
   display: none;
   font-size: 24px;
-  cursor: pointer;
-  border: none;
+  ${hovers}
 
   ${mq.maxDesktop} {
     display: inline;
@@ -161,8 +150,8 @@ export const WrapContModal = styled.div`
     padding-bottom: 50px;
   }
 `;
+export const Btn = styled.button``;
 
 export const Span = styled.span``;
-export const Btn = styled.button``;
 export const SecondItem = styled.li``;
 export const NavSocialItems = styled.li``;

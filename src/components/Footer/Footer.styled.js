@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { mq, colors } from '../../utils';
+import { mq, colors, hovers } from '../../utils';
 import { NavLink } from 'react-router-dom';
+
 
 export const Wraper = styled.footer`
   padding: 70px 46px 50px 30px;
@@ -17,6 +18,8 @@ export const Container = styled.div`
   ${mq.desktop} {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 77px;
   }
 `;
 export const WraperLogo = styled.div`
@@ -27,6 +30,7 @@ export const Logo = styled(NavLink)`
   color: ${colors.white};
   font-size: 40px;
   font-weight: 600;
+  ${hovers}
 `;
 
 export const Span = styled.span``;
@@ -39,20 +43,31 @@ export const WraperList = styled.div`
   }
 `;
 
+const ulFlex = `
+display : flex;
+flex-direction: column;
+gap:14px;
+`;
+
 export const WraperItems = styled.ul`
+  ${ulFlex}
   ${mq.desktop} {
     margin-right: 428px;
   }
 `;
 export const Items = styled.li``;
 
-export const WraperItemsSec = styled.ul``;
+export const WraperItemsSec = styled.ul`
+  ${ulFlex}
+`;
+
 export const ItemsSec = styled.li``;
 
 export const Link = styled(NavLink)`
   color: ${colors.white};
   font-size: 24px;
   text-transform: capitalize;
+  ${hovers}
 `;
 
 export const SpanCopyRight = styled.span`
