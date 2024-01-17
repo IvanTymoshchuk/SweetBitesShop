@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { colors } from 'utils';
+import { colors, display } from 'utils';
 
 export const Descr = styled.p`
   max-width: 738px;
@@ -7,8 +7,7 @@ export const Descr = styled.p`
   font-size: 24px;
 `;
 export const Btn = styled.button`
-  display: flex;
-  align-items: center;
+  ${display.flex}
   color: ${colors.primary};
   font-family: Gabarito;
   font-size: 20px;

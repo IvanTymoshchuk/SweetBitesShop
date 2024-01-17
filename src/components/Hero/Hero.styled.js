@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mq, colors } from '../../utils';
+import { mq, colors, display } from '../../utils';
 import hero from '../../img/hero/hero-mob.png';
 import hero2 from '../../img/hero/hero-tabl.png';
 import hero3 from '../../img/hero/hero-desk.png';
@@ -34,9 +34,7 @@ export const Title = styled.h1`
 `;
 export const Button = styled.button`
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${display.flexJust}
   width: 135px;
   height: 45px;
   top: 405px;

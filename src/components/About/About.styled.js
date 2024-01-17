@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mq, colors } from '../../utils';
+import { mq, colors, display } from '../../utils';
 import about from '../../img/about/about-mob.png';
 import aboutTab from '../../img/about/about-tab.png';
 import aboutDesk from '../../img/about/about-desk.png';
@@ -29,8 +29,7 @@ export const Img = styled.img`
 `;
 
 export const Wraper = styled.div`
-  display: flex;
-  justify-content: space-between;
+  ${display.flexSpace}
   ${mq.maxTablet} {
     flex-direction: column;
   }
