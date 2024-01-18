@@ -35,7 +35,7 @@ export const Span = styled.span``;
 
 export const WraperList = styled.div`
   display: flex;
-  ${mq.maxTablet} {
+  ${mq.maxDesktop} {
     justify-content: space-between;
     margin-bottom: 50px;
   }
