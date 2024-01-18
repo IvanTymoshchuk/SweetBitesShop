@@ -30,7 +30,7 @@ export const Img = styled.img`
 
 export const Wraper = styled.div`
   ${display.flexSpace}
-  ${mq.maxTablet} {
+  ${mq.maxDesktop} {
     flex-direction: column;
   }
 `;
