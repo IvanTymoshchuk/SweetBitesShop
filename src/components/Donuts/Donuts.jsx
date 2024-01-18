@@ -25,7 +25,7 @@ export const Donuts = () => {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          1440: {
+          1024: {
             slidesPerView: 3,
           },
         }}
