@@ -20,7 +20,7 @@ export const Title = styled.h1`
   top: 315px;
   font-size: 30px;
   text-transform: uppercase;
-  ${mq.mobile} {
+  ${mq.mobilePlus} {
     top: 290px;
     font-size: 50px;
   }
