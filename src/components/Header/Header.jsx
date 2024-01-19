@@ -17,7 +17,7 @@ import {
   NavSocial,
   NavSocialItems,
   WrapContModal,
-  LinkSoc,
+  LinkSoc, BtnLink,
 } from './Header.styled';
 
 export const Header = () => {
@@ -85,9 +85,9 @@ export const Header = () => {
           </SecondItem>
 
           <SecondItem>
-            <Btn>
-              <SvgIcon iconId="icon-user" width="30" height="30" />
-            </Btn>
+            <BtnLink to="/profile">
+              <SvgIcon iconId="icon-user"  width="30" height="30" />
+            </BtnLink>
           </SecondItem>
 
           <SecondItem>

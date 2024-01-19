@@ -149,6 +149,7 @@ export const WrapContModal = styled.div`
   }
 `;
 export const Btn = styled.button``;
+export const BtnLink = styled(NavLink)``;
 
 export const Span = styled.span``;
 export const SecondItem = styled.li``;
