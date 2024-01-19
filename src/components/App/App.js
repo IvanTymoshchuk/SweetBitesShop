@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 
 const Home = lazy(() => import('../../pages/Home/Home'));
 const Shop = lazy(() => import('../../pages/Shop/Shop'));
+const Login = lazy(() => import("../../pages/Login/Login"));
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
