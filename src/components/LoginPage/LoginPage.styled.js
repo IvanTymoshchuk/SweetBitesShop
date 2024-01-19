@@ -7,7 +7,7 @@ export const LoginSection = styled.div`
 
 export const LoginForm = styled.form`
   box-sizing: border-box;
-  max-width: 625px;
+  max-width: 650px;
   width: 100%;
   margin: 0 auto;
 `;
@@ -30,3 +30,23 @@ export const ButtonWrapper = styled.div`
   //   flex-direction: column;
   // }
 `;
+
+export const ButtonPrev = styled.button`
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 10px auto;
+  color: ${colors.pink1};
+  border-bottom: 1px solid ${colors.pink1};
+  font-size: 24px;
+`
+
+export  const StepWrapper = styled.div`
+  max-width: 630px;
+  width: 100%;
+  margin: 40px auto;
+  height: auto;
+`
+
+
