@@ -151,7 +151,12 @@ export const WrapContModal = styled.div`
     padding-bottom: 50px;
   }
 `;
+
 export const Btn = styled.button`
+  color: ${props => (props.colorHome ? '#ffffff' : colors.pink1)};
+  `
+
+export const BtnLink = styled(NavLink)`
   color: ${props => (props.colorHome ? '#ffffff' : colors.pink1)};
 `;
 

@@ -17,7 +17,7 @@ import {
   NavSocial,
   NavSocialItems,
   WrapContModal,
-  LinkSoc,
+  LinkSoc, BtnLink,
 } from './Header.styled';
 import { useLocation } from 'react-router-dom';
 import { colors } from '../../utils';
@@ -90,9 +90,9 @@ export const Header = () => {
           </SecondItem>
 
           <SecondItem>
-            <Btn colorHome={location.pathname === '/'}>
-              <SvgIcon iconId="icon-user" width="30" height="30" />
-            </Btn>
+            <BtnLink to="/profile" colorHome={location.pathname === '/'}>
+              <SvgIcon iconId="icon-user"  width="30" height="30" />
+            </BtnLink>
           </SecondItem>
 
           <SecondItem>
