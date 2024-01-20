@@ -3,7 +3,7 @@ import { mq, colors, hovers, display } from '../../utils';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderW = styled.header`
-  background-color: ${colors.backgroundHeader};
+  background-color: ${props => (props.bgHome ? colors.backgroundHeader : colors.noise)};
   padding-bottom: 27px;
 
   ${mq.desktop} {
@@ -32,7 +32,10 @@ export const Image = styled.img`
 
 export const HeaderLogo = styled(NavLink)`
   font-size: 12px;
-  color: ${colors.white};
+  color: ${props => (props.colorHome ? colors.white : colors.pink1)};
+  svg {
+    stroke: ${props => (props.colorHome ? colors.white : colors.pink1)};
+  }
   ${hovers}
 
   ${mq.mobile} {
@@ -82,12 +85,12 @@ export const NavItem = styled.li`
 
 export const NavBtn = styled(NavLink)`
   font-family: Gabarito;
-  color: ${colors.primary};
+  color: ${props => (props.colorHome ? colors.white : colors.pink1)};
   font-size: 50px;
   ${hovers}
 
   ${mq.desktop} {
-    color: ${colors.white};
+    color: ${props => (props.colorHome ? colors.white : colors.pink1)};
     font-size: 28px;
   }
 
@@ -148,8 +151,14 @@ export const WrapContModal = styled.div`
     padding-bottom: 50px;
   }
 `;
-export const Btn = styled.button``;
-export const BtnLink = styled(NavLink)``;
+
+export const Btn = styled.button`
+  color: ${props => (props.colorHome ? '#ffffff' : colors.pink1)};
+  `
+
+export const BtnLink = styled(NavLink)`
+  color: ${props => (props.colorHome ? '#ffffff' : colors.pink1)};
+`;
 
 export const Span = styled.span``;
 export const SecondItem = styled.li``;

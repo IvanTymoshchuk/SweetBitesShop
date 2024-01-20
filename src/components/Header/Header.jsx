@@ -19,18 +19,23 @@ import {
   WrapContModal,
   LinkSoc, BtnLink,
 } from './Header.styled';
+import { useLocation } from 'react-router-dom';
+import { colors } from '../../utils';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+  console.log(location.pathname)
+
   return (
-    <HeaderW>
+    <HeaderW bgHome={location.pathname === '/'}>
       <Wraper>
-        <HeaderLogo to="/">
+        <HeaderLogo colorHome={location.pathname === '/'}>
           Sweet <SvgIcon iconId="icon-logo" width="39" height="39" />
           <br />
           <Span>BitesShop</Span>
@@ -44,13 +49,13 @@ export const Header = () => {
           <WrapContModal>
             <NavList>
               <NavItem>
-                <NavBtn to="/home">Home</NavBtn>
+                <NavBtn colorHome={location.pathname === '/'} to="/home">Home</NavBtn>
               </NavItem>
               <NavItem>
-                <NavBtn to="/about">About</NavBtn>
+                <NavBtn colorHome={location.pathname === '/'} to="/about">About</NavBtn>
               </NavItem>
               <NavItem>
-                <NavBtn to="/shop">Shop</NavBtn>
+                <NavBtn colorHome={location.pathname === '/'} to="/shop">Shop</NavBtn>
               </NavItem>
             </NavList>
 
@@ -79,19 +84,19 @@ export const Header = () => {
 
         <SecondList>
           <SecondItem>
-            <Btn>
+            <Btn colorHome={location.pathname === '/'}>
               <SvgIcon iconId="icon-serch" width="30" height="30" />
             </Btn>
           </SecondItem>
 
           <SecondItem>
-            <BtnLink to="/profile">
+            <BtnLink to="/profile" colorHome={location.pathname === '/'}>
               <SvgIcon iconId="icon-user"  width="30" height="30" />
             </BtnLink>
           </SecondItem>
 
           <SecondItem>
-            <Btn>
+            <Btn colorHome={location.pathname === '/'}>
               <SvgIcon iconId="icon-basket" width="30" height="30" />
             </Btn>
           </SecondItem>
