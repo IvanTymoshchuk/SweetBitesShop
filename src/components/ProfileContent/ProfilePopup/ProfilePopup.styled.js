@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { colors, mq } from '../../../utils';
+import { keyframes } from '@emotion/react';
 
 export const PopupOverlay = styled.div`
   position: fixed;
@@ -19,6 +20,7 @@ export const PopupContent = styled.div`
   background-color: ${colors.white1};
   border-radius: 40px;
   padding: 40px 30px;
+  animation: dropTop .2s linear;
 `
 export const PopupTitle = styled.h3`
   width: 100%;
