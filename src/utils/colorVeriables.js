@@ -8,6 +8,7 @@ const colors = {
   pimkLight: "rgba(232, 142, 172, 0.36)",
   grean: "rgba(121, 163, 93, 1)",
   greanLight: "rgba(192, 213, 163, 1)",
+  noise: "rgba(243, 211, 222, 0.1)",
 };
 
 export default colors;

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { colors } from '../../utils';
 // import ShopMainContent from "./ShopMainContent";
 
 export const Container = styled.div`
@@ -8,7 +9,7 @@ export const Container = styled.div`
 export const Section = styled.section`
   padding: 100px 0;
   color: #d75d8e;
-  background: rgba(243, 211, 222, 0.1);
+  background: ${colors.noise};
 `;
 
 export const FlexHeading = styled.div`

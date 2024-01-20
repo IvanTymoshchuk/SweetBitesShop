@@ -5,7 +5,7 @@ export const LoginWrapper = styled.section`
   box-sizing: border-box;
   width: 100%;
   padding: 6.25vw 1vw;
-  background-color: ${colors.modal};
+  background-color: ${colors.noise};
   overflow: hidden;
 
   .fade-enter {
