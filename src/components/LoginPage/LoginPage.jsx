@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { ButtonWrapper, LoginForm, LoginSection, Title1 } from './LoginPage.styled';
 import { InputSt } from './InputSt/InputSt';
 import { ButtonSt } from './Button/ButtonSt';
-import { validationEmail, validationPassword } from '../../utils/validations';
+import { validationEmail, validationPassword } from '../../utils/index';
 
 export const LoginPage = ({ changeTypePage, innerRef, typeFormSet, setUserData, sendData }) => {
   const [loginEmail, setLoginEmail] = useState('');
