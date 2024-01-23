@@ -1,6 +1,14 @@
 import styled from "@emotion/styled";
 import { mq, colors } from "../../../utils";
 
+export const InputDefWrapper = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: ${props => (props.deleteMargin ? '0px' : 'calc(5px + 1vw)')};
+`
 export const InputWrapper = styled.div`
   display: flex;
   position: relative;
@@ -10,7 +18,7 @@ export const InputWrapper = styled.div`
   padding: calc(7px + 0.75vw) calc(10px + 2vw);
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: ${props => (props.deleteMargin ? '0px' : 'calc(5px + 1vw)')};
+  margin-bottom: 5px;
 `
 export const Input = styled.input`
   position: relative;
@@ -27,4 +35,8 @@ export const Input = styled.input`
     opacity: 0.9;
     text-transform: uppercase;
   }
+`
+export const ErrorMessageText = styled.p`
+  font: 400 14px/1.2 "Gabarito";
+  color: ${colors.red};
 `

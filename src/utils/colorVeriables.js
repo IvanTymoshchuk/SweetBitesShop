@@ -11,6 +11,7 @@ const colors = {
   grean: "rgba(121, 163, 93, 1)",
   greanLight: "rgba(192, 213, 163, 1)",
   noise: "rgba(243, 211, 222, 0.1)",
+  red: "rgba(255, 0, 0, 1)",
 };
 
 export default colors;
