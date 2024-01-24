@@ -57,3 +57,17 @@ export function validationPassword(password){
   }
   return {validation: validation, message: errorsList}
 }
+
+export function validationString(str, type){
+  const strRegex = /[ЬьЇїІіЄєА-яa-zA-Z]/;
+  if (strRegex.test(str)) return {validation: true, message: ''}
+
+  return {validation: false, message: type === 'name' ? 'Ім\'я має містити лише букви' : 'Фамілія має містити лише букви'}
+}
+
+export function validationPhone(phone){
+  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  if (phoneRegex.test(phone)) return {validation: true, message: ''}
+
+  return {validation: false, message: 'Вкажіть корректний номер телефона'}
+}
