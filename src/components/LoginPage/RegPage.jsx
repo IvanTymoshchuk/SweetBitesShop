@@ -9,6 +9,7 @@ import { RegStep0 } from './RegStep0';
 import { RegStep1 } from './RegStep1';
 import { RegStep2 } from './RegStep2';
 import { RegCounter } from './RegCounter/RegCounter';
+import { validationEmail, validationPassword, validationPhone, validationString } from '../../utils';
 
 export const RegPage = ({ innerRef, changeTypePage, typeFormSet, setUserData, sendData }) => {
   const navigate = useNavigate();
@@ -20,7 +21,13 @@ export const RegPage = ({ innerRef, changeTypePage, typeFormSet, setUserData, se
   const [registerNumber, setRegisterNumber] = useState(null);
   const [registerCountry, setRegisterCountry] = useState('');
   const [registerStreet, setRegisterStreet] = useState('');
-  const [sendActive, setSendActive] = useState(false);
+  const [validation, setValidation] = useState({
+    password: { validation: false, message: [] },
+    email: { validation: false, message: '' },
+    name: { validation: false, message: '' },
+    surname: { validation: false, message: '' },
+    number: { validation: false, message: '' },
+  });
 
   const step0Ref = useRef(null);
   const step1Ref = useRef(null);
@@ -28,9 +35,7 @@ export const RegPage = ({ innerRef, changeTypePage, typeFormSet, setUserData, se
   const [registerStep, setRegisterStep] = useState(0);
   const nodeRef = registerStep === 0 ? step0Ref : registerStep === 1 ? step1Ref : step2Ref;
 
-  useEffect(() => {
-    validation();
-  }, [registerEmail, registerPassword, registerName, registerSurname]);
+
 
   async function registerHandler(e) {
     e.preventDefault();
@@ -55,21 +60,38 @@ export const RegPage = ({ innerRef, changeTypePage, typeFormSet, setUserData, se
     }
   }
 
-  function validation() {
-    let emailValid = false, passValid = false, nameValid = false, surnameValid = false;
-    if (registerEmail.length > 5) emailValid = true;
-    if (registerPassword.length > 5) passValid = true;
-    if (registerName.length > 5) nameValid = true;
-    if (registerSurname.length > 5) surnameValid = true;
-
-    setSendActive(emailValid && passValid && nameValid && surnameValid);
-  }
-
   function changeRegPage(type, e) {
-    console.log(e);
-    console.log('work');
     e.preventDefault();
-    if (type === 'next' && registerStep !== 2) setRegisterStep(registerStep + 1);
+    if (type === 'next' && registerStep !== 2) {
+      if (registerStep === 0){
+        let emailValid, passValid;
+        emailValid = validationEmail(registerEmail)
+        passValid = validationPassword(registerPassword)
+        if (emailValid.validation && passValid.validation){
+          setRegisterStep(registerStep + 1);
+        } else{
+          validation.email = emailValid
+          validation.password = passValid
+        }
+      }
+      if (registerStep === 1){
+        let nameValid, surnameValid, numberValid;
+        nameValid = validationString(registerName, 'name')
+        surnameValid = validationString(registerSurname, 'surname')
+        numberValid = validationPhone(registerNumber)
+
+        console.log(nameValid)
+        console.log(surnameValid)
+        console.log(numberValid)
+        if (nameValid.validation && surnameValid.validation && numberValid.validation){
+          setRegisterStep(registerStep + 1);
+        } else{
+          validation.name = nameValid
+          validation.surname = surnameValid
+          validation.number = numberValid
+        }
+      }
+    }
     if (type === 'prev' && registerStep !== 0) setRegisterStep(registerStep - 1);
   }
 
@@ -90,12 +112,13 @@ export const RegPage = ({ innerRef, changeTypePage, typeFormSet, setUserData, se
             {registerStep === 0 ? (<RegStep0 innerRef={step0Ref} registerEmail={registerEmail}
                                              setRegisterEmail={setRegisterEmail}
                                              registerPassword={registerPassword}
-                                             setRegisterPassword={setRegisterPassword} />) : registerStep === 1 ? (
+                                             setRegisterPassword={setRegisterPassword} validation={validation} />) : registerStep === 1 ? (
               <RegStep1 innerRef={step1Ref} registerName={registerName}
                         setRegisterName={setRegisterName}
                         registerNumber={registerNumber}
                         setRegisterNumber={setRegisterNumber}
                         registerSurname={registerSurname}
+                        validation={validation}
                         setRegisterSurname={setRegisterSurname}/>) : (<RegStep2 innerRef={step2Ref} registerCountry={registerCountry}
                                                                                 setRegisterCountry={setRegisterCountry}
                                                                                 registerStreet={registerStreet}
@@ -105,7 +128,7 @@ export const RegPage = ({ innerRef, changeTypePage, typeFormSet, setUserData, se
         <ButtonWrapper>
           <ButtonSt buttonFunc={changeTypePage} text={'SIGN IN'} />
           {registerStep !== 2 ? (<ButtonSt buttonFunc={(e) => changeRegPage('next', e)} text={'NEXT'} />) : (
-            <ButtonSt buttonFunc={registerHandler} text={'SIGN UP'} disabled={!sendActive} />)}
+            <ButtonSt buttonFunc={registerHandler} text={'SIGN UP'} />)}
         </ButtonWrapper>
         {registerStep !== 0 ? (<ButtonPrev onClick={(e) => changeRegPage('prev', e)}>Back</ButtonPrev>) : ('')}
       </LoginForm>
