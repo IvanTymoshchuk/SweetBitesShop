@@ -20,7 +20,6 @@ import {
   LinkSoc, BtnLink,
 } from './Header.styled';
 import { useLocation } from 'react-router-dom';
-import { colors } from '../../utils';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,9 +27,6 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-
-  console.log(location.pathname)
 
   return (
     <HeaderW bgHome={location.pathname === '/'}>
