@@ -3,7 +3,8 @@ import { mq, colors } from '../../../utils';
 
 export const Wraper = styled.div`
   padding: 61px 58px 62px 57px;
-  background-color: ${colors.backgroundHeader};
+  border-radius: 39px;
+  background-color: ${colors.bgDonuts};
   ${mq.desktop} {
     padding: 53px 45px;
   }
@@ -14,7 +15,6 @@ export const Img = styled.img`
   }
 `;
 export const List = styled.ul`
-
   ${mq.maxMobile} {
     flex-direction: column;
   }

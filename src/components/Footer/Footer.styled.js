@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Wraper = styled.footer`
   padding: 70px 46px 50px 30px;
-  background-color: ${colors.backgroundHeader};
+  background-color: ${colors.pink};
   ${mq.tablet} {
     padding: 70px 130px 50px 40px;
   }

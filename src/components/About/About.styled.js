@@ -6,7 +6,7 @@ import aboutDesk from '../../img/about/about-desk.png';
 
 export const Section = styled.section`
   padding: 70px 30px;
-  background-color: ${colors.pimkLight};
+  background-color: ${colors.bg};
   ${mq.tablet} {
     padding: 90px 80px;
   }

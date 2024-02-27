@@ -5,13 +5,13 @@ import hero2 from '../../img/hero/hero-tabl.png';
 import hero3 from '../../img/hero/hero-desk.png';
 
 export const Wraper = styled.section`
-  padding: 0 0 35px 30px;
-  background-color: ${colors.backgroundHeader};
+  padding: 27px 0 35px 30px;
+  background: ${colors.backgroundHeader};
   ${mq.tablet} {
-    padding: 0 30px 35px 40px;
+    padding: 27px 30px 35px 40px;
   }
   ${mq.desktop} {
-    padding: 0 80px 75px 80px;
+    padding: 77px 80px 75px 80px;
   }
 `;
 export const Title = styled.h1`

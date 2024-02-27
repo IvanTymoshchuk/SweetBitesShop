@@ -3,12 +3,8 @@ import { mq, colors, hovers, display } from '../../utils';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderW = styled.header`
-  background-color: ${props => (props.bgHome ? colors.backgroundHeader : colors.noise)};
-  padding-bottom: 27px;
-
-  ${mq.desktop} {
-    padding-bottom: 77px;
-  }
+  background: ${props =>
+    props.bgHome ? colors.backgroundHeader : colors.noise};
 `;
 
 export const Wraper = styled.div`
@@ -51,7 +47,7 @@ export const Nav = styled.nav`
     position: fixed;
     top: 0px;
     right: -100%;
-    background-color: ${colors.modal};
+    background-color: ${colors.bg};
     width: 100%;
     height: 100vh;
     z-index: 100;
@@ -85,7 +81,7 @@ export const NavItem = styled.li`
 
 export const NavBtn = styled(NavLink)`
   font-family: Gabarito;
-  color: ${props => (props.colorHome ? colors.white : colors.pink1)};
+  color: ${props => (props.colorHome ? colors.primary : colors.pink1)};
   font-size: 50px;
   ${hovers}
 
@@ -154,7 +150,7 @@ export const WrapContModal = styled.div`
 
 export const Btn = styled.button`
   color: ${props => (props.colorHome ? '#ffffff' : colors.pink1)};
-  `
+`;
 
 export const BtnLink = styled(NavLink)`
   color: ${props => (props.colorHome ? '#ffffff' : colors.pink1)};
