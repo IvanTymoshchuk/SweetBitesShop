@@ -41,6 +41,13 @@ export const Button = styled.button`
   gap: 5px;
   border-radius: 30px;
   border: 4px solid #fcf3f6;
+  color: ${colors.white};
+  fill: ${colors.white};
+  &:hover {
+    background-color: ${colors.white};
+    color: ${colors.pink1};
+    fill: ${colors.pink1};
+  }
   ${mq.mobile} {
     width: 223px;
     height: 76px;
@@ -52,7 +59,6 @@ export const Button = styled.button`
   }
 `;
 export const Span = styled.span`
-  color: ${colors.white};
   font-family: Gabarito;
   font-size: 20px;
   ${mq.mobile} {
