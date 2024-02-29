@@ -3,6 +3,7 @@ import { mq, colors, display } from '../../utils';
 import hero from '../../img/hero/hero-mob.png';
 import hero2 from '../../img/hero/hero-tabl.png';
 import hero3 from '../../img/hero/hero-desk.png';
+import { NavLink } from 'react-router-dom';
 
 export const Wraper = styled.section`
   padding: 27px 0 35px 30px;
@@ -32,7 +33,7 @@ export const Title = styled.h1`
     font-size: 85px;
   }
 `;
-export const Button = styled.button`
+export const Button = styled(NavLink)`
   position: absolute;
   ${display.flexJust}
   width: 135px;

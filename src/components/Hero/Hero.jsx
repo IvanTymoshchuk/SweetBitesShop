@@ -13,7 +13,7 @@ export const Hero = () => {
         </Title>
         <Img />
 
-        <Button type="submit">
+        <Button to="/shop">
           <Span>Buy Now</Span>
           <SvgIcon iconId="icon-arrow" width="28" height="28" />
         </Button>
