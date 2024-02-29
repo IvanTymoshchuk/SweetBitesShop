@@ -10,6 +10,12 @@ export const Wraper = styled.div`
   }
 `;
 export const Img = styled.img`
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transition: transform 0.75s;
+    transform: scale(1.1);
+  }
   ${mq.desktop} {
     height: 307px;
   }
