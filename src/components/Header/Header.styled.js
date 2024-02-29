@@ -32,7 +32,6 @@ export const HeaderLogo = styled(NavLink)`
   svg {
     stroke: ${props => (props.colorHome ? colors.white : colors.pink1)};
   }
-  ${hovers}
 
   ${mq.mobile} {
     font-size: 36px;
@@ -80,6 +79,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavBtn = styled(NavLink)`
+  position: relative;
   font-family: Gabarito;
   color: ${props => (props.colorHome ? colors.primary : colors.pink1)};
   font-size: 50px;
@@ -103,7 +103,6 @@ export const CloseButton = styled.button`
   right: 24px;
   display: block;
   color: ${colors.white};
-  ${hovers}
 
   cursor: pointer;
   ${mq.desktop} {
@@ -115,7 +114,6 @@ export const ToggleButton = styled.button`
   color: ${colors.white};
   display: none;
   font-size: 24px;
-  ${hovers}
 
   ${mq.maxDesktop} {
     display: inline;

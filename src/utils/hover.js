@@ -1,9 +1,16 @@
 const hovers = {
-  transition: 'color 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-  '&:hover, &:focus': {
-    color: 'rgba(121, 163, 93, 1)',
-    transition: 'color 0.75s, transform 0.75s',
-    transform: 'scale(1.1)',
+  '&:after': {
+    content: "''",
+    width: '0%',
+    height: '5%',
+    background: '#ffffff',
+    position: 'absolute',
+    left: '0px',
+    bottom: '-0.1rem',
+    transition: 'width 0.3s ease 0s',
+  },
+  '&:hover::after, &:focus::after': {
+    width: '100%',
   },
 };
 
