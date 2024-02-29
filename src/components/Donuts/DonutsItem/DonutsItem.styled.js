@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { mq, colors } from '../../../utils';
+import hoverSvg from 'utils/hoverSvg';
 
 export const Wraper = styled.div`
   padding: 61px 58px 62px 57px;
@@ -11,11 +12,8 @@ export const Wraper = styled.div`
 `;
 export const Img = styled.img`
   cursor: pointer;
-  transition: 0.3s;
-  &:hover {
-    transition: transform 0.75s;
-    transform: scale(1.1);
-  }
+  ${hoverSvg}
+
   ${mq.desktop} {
     height: 307px;
   }
